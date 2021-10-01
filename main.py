@@ -8,8 +8,9 @@ def main():
                         help='Input name of csv file with data')
 
     args = parser.parse_args()
-    return get_duplicates(args.file_name)
+    pairs = get_duplicates(args.file_name)
+    [print(i) for i in pairs]
 
 
 if __name__ == '__main__':
-    print(main())
+    main()
