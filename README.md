@@ -37,6 +37,6 @@ Examples of running the program:
 
 ```sh
 python src/main.py
-python src/main.py companies.csv
+python src/main.py -fn=companies.csv
 python src/main.py -h
 ```
