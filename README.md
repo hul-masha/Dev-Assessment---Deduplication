@@ -1,5 +1,5 @@
 # Dev-Assessment---Deduplication
-# Duplicate search engine
+## Duplicate search engine
 ## _Searches for duplicates among company names_
 
 
