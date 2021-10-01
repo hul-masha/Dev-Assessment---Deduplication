@@ -1,0 +1,21 @@
+EN:
+make the field containing the link to the company
+and the field containing the link to the company in linkedin unique and mandatory.
+next, write code that, after creating or updating company information,
+will search for a duplicate by fields containing links and not names and,
+if such a duplicate is found, delete it.
+when a user fills out a form to create or update information about a company,
+write a text so that he fills in the fields containing links very carefully
+(if the user is a real person, then this will help minimize the likelihood of his error a little),
+also when filling out a link, check whether such a link exists in principle.
+
+RU:
+сделать поле сожедржащее ссылку на компанию
+и поле содержащее ссылку на компанию в линкедин уникальными и обязательными.
+далее написать код который после созданиня или обновления информации о компании
+будет искать дубликат по полям содержащим ссылки а не имена и
+в случае нахождения такого дубликата удалять его.
+при заполнении пользователем формы для создания или обновления информации о компании
+написать текст чтобы он заполнял поля содержащие ссылки сочень внинмательно
+(если пользователем является реальный человек то это немного поможет минимизировать вероятность его ошибки),
+так же при заполнении ссылки проверять существует ли такая ссылка в принципе.
