@@ -1,4 +1,4 @@
-from src.solution import find_duplicates
+from src.solution import get_duplicates
 import argparse
 
 
@@ -8,8 +8,8 @@ def main():
                         help='Input name of csv file with data')
 
     args = parser.parse_args()
-    return args.file_name
+    return get_duplicates(args.file_name)
 
 
 if __name__ == '__main__':
-    find_duplicates(main())
+    print(main())
