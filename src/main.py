@@ -1,4 +1,4 @@
-from src.solution import get_duplicates
+from solution import get_duplicates
 import argparse
 
 
