@@ -36,7 +36,7 @@ pipenv install
 Examples of running the program:
 
 ```sh
-python main.py
-python main.py companies.csv
-python main.py -h
+python src/main.py
+python src/main.py companies.csv
+python src/main.py -h
 ```
