@@ -21,11 +21,9 @@ def find_duplicates(df: pd.core.frame.DataFrame) -> list:
             if name_1_id != name_2_id and {name_1_id: name_1, name_2_id: name_2} not in duplicate_pairs:
                 if name_1 == name_2:
                     duplicate_pairs.append({name_1_id: name_1, name_2_id: name_2})
-                    # df = df.query(f"Id not in [{name_2_id}]")
                     break
                 elif fuzz.ratio(name_2, name_1) > 85:
                     duplicate_pairs.append({name_1_id: name_1, name_2_id: name_2})
-                    # df = df.query(f"Id not in [{name_2_id}]")
                     break
         df = df.query(f"Id not in [{name_1_id}]")
     return duplicate_pairs

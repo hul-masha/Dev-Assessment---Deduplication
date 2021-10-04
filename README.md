@@ -21,22 +21,16 @@ optional arguments:
 
 Open your favorite Terminal and run these commands.
 
-To install packages from requirements.txt:
+To install packages from pyproject.toml:
 
 ```sh
-pip install -r requirements.txt
-```
-
-To install packages from Pipfile:
-
-```sh
-pipenv install
+poetry install
 ```
 
 Examples of running the program:
 
 ```sh
-python src/main.py
-python src/main.py -fn=companies.csv
-python src/main.py -h
+poetry run python src/main.py
+poetry run python src/main.py -fn=companies.csv
+poetry run python src/main.py -h
 ```
