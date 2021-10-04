@@ -15,15 +15,17 @@ def get_duplicates(file_name: str = "companies.csv"):
 
 
 def find_duplicates(df: pd.core.frame.DataFrame) -> list:
-    duplicate_pairs = []
+    duplicate_pairs, real_duplicate = [], {}
+    for row in df[df.duplicated(subset=['name'], keep=False)].itertuples():
+        if row.name not in real_duplicate:
+            real_duplicate[row.name] = []
+        real_duplicate[row.name].append(row.Id)
+    duplicate_pairs.append(real_duplicate)
+    df = df.drop_duplicates(subset=['name'], keep=False)
     for name_1_id, name_1 in zip(df["Id"], df["name"]):
         for name_2_id, name_2 in zip(df["Id"], df["name"]):
-            if name_1_id != name_2_id and {name_1_id: name_1, name_2_id: name_2} not in duplicate_pairs:
-                if name_1 == name_2:
-                    duplicate_pairs.append({name_1_id: name_1, name_2_id: name_2})
-                    break
-                elif fuzz.ratio(name_2, name_1) > 85:
-                    duplicate_pairs.append({name_1_id: name_1, name_2_id: name_2})
-                    break
+            if name_1_id != name_2_id and fuzz.ratio(name_2, name_1) > 85:
+                duplicate_pairs.append({name_1: name_1_id, name_2: name_2_id})
+                break
         df = df.query(f"Id not in [{name_1_id}]")
     return duplicate_pairs
