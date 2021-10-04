@@ -10,6 +10,7 @@ def main():
     args = parser.parse_args()
     pairs = get_duplicates(args.file_name)
     [print(i) for i in pairs]
+    print(len(pairs))
 
 
 if __name__ == '__main__':

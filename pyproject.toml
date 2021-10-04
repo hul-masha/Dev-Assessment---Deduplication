@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dev-assessment---deduplication"
+version = "0.1.0"
+description = ""
+authors = ["Gul-lug <masha.gul15@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.3.3"
+fuzzywuzzy = "^0.18.0"
+python-Levenshtein = "^0.12.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
